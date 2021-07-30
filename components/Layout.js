@@ -2,7 +2,8 @@ import Head from 'next/head'
 import styles from '../styles/Layout.module.css'
 import Nav from './Nav'
 import Header from './Header'
-// import Firestore from './Firestore'
+import Script from 'next/script'
+import firebaseApp from '../firebase';
 
 export const siteTitle = 'Houseplant.app'
 
@@ -39,6 +40,18 @@ export default function Layout({ children, home }) {
                     content="Use tools to take a photo and identify your houseplants"
                 />
                 <meta name="og:title" content={siteTitle} />
+
+                {/* <!-- The core Firebase JS SDK is always required and must be listed first --> */}
+                <script
+                    src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"
+                />
+
+                {/* <!-- TODO: Add SDKs for Firebase products that you want to use */}
+                {/* https://firebase.google.com/docs/web/setup#available-libraries --> */}
+                <script
+                    src="https://www.gstatic.com/firebasejs/8.8.1/firebase-analytics.js"
+                />
+                
             </Head>
 
             <Nav />

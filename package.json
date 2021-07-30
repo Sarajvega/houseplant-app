@@ -6,10 +6,32 @@
     "start": "next start"
   },
   "dependencies": {
+    "firebase": "^8.8.1",
     "next": "latest",
     "next-pwa": "^3.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
-  "license": "MIT"
+  "license": "UNLICENSED",
+  "name": "houseplant-app",
+  "description": "This example uses [`next-pwa`](https://github.com/shadowwalker/next-pwa) to create a progressive web app (PWA) powered by [Workbox](https://developers.google.com/web/tools/workbox/).",
+  "version": "1.0.0",
+  "main": "firebase.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sarajvega/houseplant-app.git"
+  },
+  "keywords": [
+    "houseplant",
+    "webapp",
+    "pwa",
+    "plant",
+    "care"
+  ],
+  "author": "SJV",
+  "bugs": {
+    "url": "https://github.com/Sarajvega/houseplant-app/issues"
+  },
+  "homepage": "https://github.com/Sarajvega/houseplant-app#readme"
 }
