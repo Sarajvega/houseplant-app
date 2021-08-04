@@ -1,0 +1,28 @@
+.svg {
+background-image: url(/images/arc.svg);
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.w12{
+width: 100%;
+}
+
+.w6{
+width: 50%;
+}
+
+.row{
+display: flex;
+}
+
+@media (min-width: 787px){
+.w6md{
+    width: 50%;
+}
+}
+
+.img {
+    width: 100%;
+
+}

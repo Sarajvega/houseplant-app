@@ -1,36 +1,27 @@
-import ArticleList from "../components/ArticleList"
-import firebase from "../firebase"
 
-export default function Home({articles}) {
-  // console.log(articles)
-  return (
-    <div>
-      {/* pass articles into ArticleList component as props */}
-      <ArticleList articles={articles} />
-    </div>
-  )
-}
+import homeStyles from '../styles/Home.module.css'
+import React from "react"
 
-// calls an api and gets 6 articles.
-// export const getStaticProps = async () => {
-//   // fake rest api
-//   const res = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=6`)
-//   const articles = await res.json()
-//   return {
-//     props: {
-//       articles
-//     }
-//   }
+// const loadPlants = (ref) => {
+//   getPlants(ref).then(setPlants)
 // }
 
-var ref = firebase.database().ref("plants");
-console.log(ref.orderByKey().val)
-// ref.orderByKey().on("value", function(snapshot) {
-//   console.log(snapshot.val, "Plant table accessed");
-// });
-ref.once("value")
-  .then(function(snapshot){
-    var name = snapshot.val()
-    console.log(name)
+// const getPlants = (ref) => {
+//   return ref.once('value');
+// }
 
-  })
+export default function Home() {
+  return (
+      <div className={homeStyles.row}>
+          <div className={`${homeStyles.w12} ${homeStyles.w6md}`}>
+            <h3> New plant but not sure what is it??</h3>
+            <h2> We can help</h2>
+            <button> IDENTIFY NOW</button>
+          </div>
+
+          <div className={`${homeStyles.svg} ${homeStyles.w12} ${homeStyles.w6md}`}>         
+              <img src="images/monstera-deliciosa.png" className={homeStyles.img}></img>
+          </div>
+          
+      </div>)
+}

@@ -1,9 +1,12 @@
-const withPWA = require('next-pwa')
-const runtimeCaching = require('next-pwa/cache')
+// Can I configure this to only run when I produce my app?
+// doesn't actually affect development.
 
-module.exports = withPWA({
-  pwa: {
-    dest: 'public',
-    runtimeCaching,
-  },
-})
+// const withPWA = require('next-pwa')
+// const runtimeCaching = require('next-pwa/cache')
+
+// module.exports = withPWA({
+//   pwa: {
+//     dest: 'public',
+//     runtimeCaching,
+//   },
+// })
