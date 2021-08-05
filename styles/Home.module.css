@@ -14,6 +14,7 @@ width: 50%;
 
 .row{
 display: flex;
+flex-wrap: wrap;
 }
 
 @media (min-width: 787px){

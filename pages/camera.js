@@ -1,27 +1,47 @@
 import WebcamComponent from "../components/WebcamComponent"
+import React from "react";
+
 export default function Camera() {
 
-    // button which activates webcomponent
-    // button to capture image in state
-    // button to upload image
-    // button to anaylze 
+    const [src, setSrc] = React.useState(null)
+    const [selectedFile, setFile] = React.useState(null)
 
+    const previewFile = (Event) => {
+        const reader = new FileReader();
+        var newFile = Event.target.files[0]
+        setFile(newFile)
+
+        reader.addEventListener("load", function () {
+            // convert image file to base64 string
+            var fileSrc = reader.result;
+            setSrc(fileSrc)
+    
+            console.log('Render result:',reader.result)
+        }, false);
+    
+        if (newFile) {
+            reader.readAsDataURL(newFile);
+        }
+    }
+    const newFunc = (camSrc) => {
+        console.log('Im called!')
+        setSrc(camSrc)
+    }
     return (
-    <div>
-        <h1>
-            Camera
-        </h1>
-        <WebcamComponent />
-        <button> Toggle Camera</button>
-        <button> Take Photo </button>
-        
-        <form onSubmit=''>
-            <label>Upload a file</label>
-            <input type="file" /> 
-            <button type='submit'> Preview file </button>
-        </form>
+        <>
+            <h1>
+                Camera
+            </h1>
 
-        <button> Analyze Image </button>
-    </div>
+            <br />
+            <WebcamComponent onCapture={newFunc} />
+            <form>
+                <label>Upload a file</label>
+                <input type="file" name="file" onChange={previewFile} />
+            </form>
+            <img src={src} height="200" alt="Image preview..." />
+
+            <button > Analyze Image </button>
+        </>
     )
 }
