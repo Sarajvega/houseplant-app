@@ -14,10 +14,10 @@
     "static/development/_ssgManifest.js"
   ],
   "pages": {
-    "/": [
+    "/Plant/[id]": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/index.js"
+      "static/chunks/pages/Plant/[id].js"
     ],
     "/_app": [
       "static/chunks/webpack.js",
@@ -29,15 +29,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/camera": [
+    "/list": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/camera.js"
-    ],
-    "/next/dist/pages/_error": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/next/dist/pages/_error.js"
+      "static/chunks/pages/list.js"
     ]
   },
   "ampFirstPages": []

@@ -6,15 +6,25 @@ import { useState } from "react";
 // Use .getUseRMedia() to toggle? Overriding what's built into the webcomponent.
 
 // I’d probably add an onCapture prop to the WebcamComponent that gets passed the imageSrc whenever it changes thereby “passing the source ‘up’” as you said
-const WebcamComponent = (props) => {
+const WebcamComponent = ({setSource}) => {
     const webcamRef = React.useRef(null);
-    const [imgSrc, setImgSrc] = React.useState(null);
+    // const [imgSrc, setImgSrc] = React.useState(null);
 
+    // const capture = () => {
+    //     const imageSrc = webcamRef.current.getScreenshot();
+    //     // setImgSrc(imageSrc);
+    //     props.setSource(imageSrc)
+    //     console.log("this is the imagesrc:", imageSrc)
+    // }
+
+    // memoizing capture function.
     const capture = React.useCallback(() => {
+        // imageSrc is base64
         const imageSrc = webcamRef.current.getScreenshot();
-        setImgSrc(imageSrc);
-        props.onCapture(imageSrc)
-    }, [webcamRef, setImgSrc]);
+        // setImgSrc(imageSrc);
+        setSource(imageSrc)
+        console.log("this is the imagesrc:", imageSrc)
+    }, [webcamRef, setSource]);
 
     return (
         <>

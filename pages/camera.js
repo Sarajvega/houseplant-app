@@ -23,10 +23,7 @@ export default function Camera() {
             reader.readAsDataURL(newFile);
         }
     }
-    const newFunc = (camSrc) => {
-        console.log('Im called!')
-        setSrc(camSrc)
-    }
+
     return (
         <>
             <h1>
@@ -34,7 +31,7 @@ export default function Camera() {
             </h1>
 
             <br />
-            <WebcamComponent onCapture={newFunc} />
+            <WebcamComponent setSource={setSrc} />
             <form>
                 <label>Upload a file</label>
                 <input type="file" name="file" onChange={previewFile} />
