@@ -26,7 +26,6 @@ export default function Camera() {
             reader.readAsDataURL(newFile);
         }
     }
-    // async -> synt sug to be able to deal w/ promise chains. 
     const analyzeImage = () => {
         console.log("analyze button clicked!")
 
@@ -38,18 +37,10 @@ export default function Camera() {
                 image: imageData
             })
             .then((res) => {
-                // expects a resp. obj. 
-                // usually call a setter for a piece of state. --> load plant care page. 
-                // next --> redirect to new location.
                 console.log("Successful request~")
-                console.log("This is what the response object looks like: ", res)
                 console.log(res.data.predictions[0].label)
                 const plantName = res.data.predictions[0].label
-                // router.push(plantName)
-                // router.push("/Plant/aloe")
                 router.push(`/Plant/${plantName}`)
-
-
             })
             .catch(function (error) {
                 if (error.response) {
