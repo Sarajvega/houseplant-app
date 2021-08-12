@@ -28,7 +28,6 @@ export default function Camera() {
     }
     const analyzeImage = () => {
         console.log("analyze button clicked!")
-
         const url = `https://plant-prediction-service.azurewebsites.net/predict`
         var imageData = src
 
@@ -77,7 +76,7 @@ export default function Camera() {
             </form>
             <img src={src} height="200" alt="Image preview..." />
 
-            <button onClick={analyzeImage} className="button"> Analyze Image </button>
+            <button onClick={analyzeImage} className="button-camera"> Analyze Image </button>
         </>
     )
 }

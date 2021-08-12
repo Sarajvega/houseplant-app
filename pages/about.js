@@ -2,7 +2,7 @@ import Head from "next/dist/next-server/lib/head";
 
 export default function About() {
     return (
-    <div>
+    <div className="w9">
         <h1>
             About
         </h1>

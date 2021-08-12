@@ -33,7 +33,7 @@ const WebcamComponent = ({setSource}) => {
                 ref={webcamRef}
                 screenshotFormat="image/jpeg"
             />
-            <button onClick={capture} className="button">Capture photo</button>
+            <button onClick={capture} className="button-camera">Capture photo</button>
 
         </>
     );

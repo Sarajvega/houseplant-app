@@ -4,13 +4,13 @@ import React from 'react'
 
 export const Header = () => {
     return (
-        <div>
+        <div className="w12">
             <h1 className={headerStyles.title}>
-                <span>Houseplant.app</span> Baby!
+                <span>Houseplant.app</span>
             </h1>
-            <p className={headerStyles.description}>
+            {/* <p className={headerStyles.description}>
                 Identify your houseplant.
-            </p>
+            </p> */}
         </div>
     )
 }

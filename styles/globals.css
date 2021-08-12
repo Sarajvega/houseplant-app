@@ -10,33 +10,71 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
+.home-font{
+  font-size: 3rem;
+}
 * {
   box-sizing: border-box;
 }
 
 .button{
-  background-color: #426d51;
-  color: white;
-  padding: 12px;
+  /* background-color: #426d51;
+  color: white; */
+  background-color: #b4e6c5;
+  color: #0da245;
+  padding: 25px;
   border: none;
   border-radius: 10.5px;
+  font-size: 2.3rem;
 }
 .button:hover {
   opacity: .75;
 }
 
-/* file upload styles */
-input[type="file"] {
-  display: none;
-}
-.file-upload {
-  border: 1px solid #ccc;
-  display: inline-block;
-  padding: 6px 12px;
+.button-camera{
+  background-color: #426d51;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 10.5px;
+  font-size: 1.5rem;
+  margin: 2rem;
   cursor: pointer;
+
+}
+form {
+  margin: 2rem;
 }
 
 img {
   max-width: 100%;
 }
+
+
+.w12{
+  width: 100%;
+  }
+  
+  .w6{
+  width: 50%;
+  }
+
+  .w9{
+    width: 75%
+  }
+  
+  .row{
+  display: flex;
+  flex-wrap: wrap;
+  }
+  
+  @media (min-width: 787px){
+  .w6md{
+      width: 50%;
+  }
+  }
+  
+  .img {
+      width: 100%;
+  
+  }
