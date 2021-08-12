@@ -45,7 +45,7 @@ export default function Camera() {
                 console.log("This is what the response object looks like: ", res)
                 console.log(res.data.predictions[0].label)
                 const plantName = res.data.predictions[0].label
-                router.push(plantName)
+                // router.push(plantName)
                 // router.push("/Plant/aloe")
                 router.push(`/Plant/${plantName}`)
 
