@@ -37,6 +37,7 @@ export default function Camera() {
             })
             .then((res) => {
                 console.log("Successful request~")
+                console.log(res.data)
                 console.log(res.data.predictions[0].label)
                 const plantName = res.data.predictions[0].label
                 router.push(`/Plant/${plantName}`)
