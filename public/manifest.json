@@ -1,6 +1,7 @@
 {
   "name": "houseplant.app",
   "short_name": "houseplant.app",
+  "description": "Progressive Web App that identifies plants",
   "theme_color": "#ffffff",
   "background_color": "#004740",
   "display": "fullscreen",
