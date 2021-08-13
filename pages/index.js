@@ -2,13 +2,6 @@
 import homeStyles from '../styles/Home.module.css'
 import React from "react"
 import Link from 'next/dist/client/link'
-// const loadPlants = (ref) => {
-//   getPlants(ref).then(setPlants)
-// }
-
-// const getPlants = (ref) => {
-//   return ref.once('value');
-// }
 
 export default function Home() {
   return (
@@ -23,11 +16,8 @@ export default function Home() {
             </button>
           </div>
 
-          {/* <div className={`${homeStyles.svg} ${homeStyles.w12} ${homeStyles.w6md}`}>    */}
           <div className="w12 w6md">         
-
               <img src="images/monstera-deliciosa.png" className={homeStyles.img}></img>
-              
           </div>
           
       </div>)
