@@ -19,8 +19,8 @@ export default function Layout({ children, home }) {
                 />
                 <meta name="description" content="Description" />
                 <meta name="keywords" content="Keywords" />
-                {/* <link rel="manifest" href="/manifest.json" />
-                <link
+                <link rel="manifest" href="/manifest.json" />
+                {/* <link
                     href="/icons/favicon-16x16.png"
                     rel="icon"
                     type="image/png"
