@@ -3,27 +3,41 @@ import React from 'react'
 import firebase from "../../../firebase"
 
 
-const PlantContent = ({ id, Name, Humidity, Sun, ImgURL }) => {
+const PlantContent = ({ id, Name, Humidity, Sun, Temperature, Water, ImgURL }) => {
 
     return (
-        <div>
-            <h3>This is plant id: {id}</h3>
+        <div className="row plant-image-left-info-right content-width">
+            <div className="w12 w6md  image">
+                <img src={ImgURL}></img>
+            </div>
 
-            <h3>Name</h3>
-            <p>{Name}</p>
-            <p>{Humidity}</p>
-            <p>{Sun}</p>
-            <p>IMG below</p>
+            <div className="w12 w6md">
+                <h3>Name</h3>
+                <p>{Name}</p>
 
-            <img src={ImgURL}></img>
+                <h3>Water</h3>
+                <p>{Water}</p>
+
+                <h3>Humidity</h3>
+                <p>{Humidity}</p>
+
+                <h3>Sun</h3>
+                <p>{Sun}</p>
+
+                <h3>Temperature</h3>
+                <p>{Temperature}</p>
+            </div>
 
 
-            <Link href="/">
-                Go back &rarr;
-            </Link>
 
+            <div className="w12 ">
+                <button className="go-back">
+                <Link href="/list">
+                    Go back &rarr;
+                </Link>
+                </button>
+            </div>
         </div>
-
     )
 }
 

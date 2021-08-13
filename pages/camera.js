@@ -71,9 +71,9 @@ export default function Camera() {
             <br />
             <WebcamComponent setSource={setSrc} />
             <form>
-                <label className="file-upload">Upload a file</label>
-                <br></br>
-                <input type="file" name="file" onChange={previewFile} />
+                <label for="file" className="file-upload">Upload a file
+                    <input type="file" name="file" id="file" onChange={previewFile} />
+                </label>
             </form>
             <img src={src} height="200" alt="Image preview..." />
 

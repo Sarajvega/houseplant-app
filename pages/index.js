@@ -14,7 +14,7 @@ export default function Home() {
   return (
       <div className="row w9">
           <div className="w12 w6md home-font">
-            <h3 className=""> 
+            <h3 className="home-font-sub"> 
               New plant but not sure what it is?
             </h3>
             <h2> We can help</h2>

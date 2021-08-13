@@ -6,27 +6,50 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-.home-font{
-  font-size: 3rem;
-}
 * {
   box-sizing: border-box;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.home-font{
+  font-size: 2rem;
+}
+
+@media (min-width: 787px) {
+  .home-font{
+    font-size: 3rem;
+  }
+}
+
+.home-font-sub{
+  font-weight: 300;
+}
+
 .button{
-  /* background-color: #426d51;
-  color: white; */
   background-color: #b4e6c5;
   color: #0da245;
   padding: 25px;
   border: none;
   border-radius: 10.5px;
-  font-size: 2.3rem;
+  font-size: 1.3rem;
 }
+@media (min-width: 787px) {
+  .button{
+    background-color: #b4e6c5;
+    color: #0da245;
+    padding: 25px;
+    border: none;
+    border-radius: 10.5px;
+    font-size: 2.3rem;
+  }
+}
+  
+
+
 .button:hover {
   opacity: .75;
 }
@@ -34,14 +57,25 @@ a {
 .button-camera{
   background-color: #426d51;
   color: white;
-  padding: 14px;
+  padding: 10px 25px;
   border: none;
-  border-radius: 10.5px;
-  font-size: 1.5rem;
+  border-radius: 6.5px;
+  font-size: 1.2rem;
   margin: 2rem;
   cursor: pointer;
-
 }
+.button-camera:hover{
+  opacity: 0.75;
+}
+
+.go-back{
+  background-color: #426d51;
+  padding: 10px 25px;
+  border: none;
+  font-size: 1.2rem;
+  color: white;
+}
+
 form {
   margin: 2rem;
 }
@@ -50,9 +84,14 @@ img {
   max-width: 100%;
 }
 
+/* img.thumbnail{
+  width: 90%;
+  height: 300px;
+} */
 
 .w12{
   width: 100%;
+  
   }
   
   .w6{
@@ -78,3 +117,31 @@ img {
       width: 100%;
   
   }
+
+.plant-image-left-info-right .image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.file-upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.file-upload:hover{
+  background-color: #426d51;
+  color: white;
+
+}
+
+.content-width{
+  width: 96%;
+  max-width: 1000px;
+}

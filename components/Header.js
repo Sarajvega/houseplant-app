@@ -8,9 +8,6 @@ export const Header = () => {
             <h1 className={headerStyles.title}>
                 <span>Houseplant.app</span>
             </h1>
-            {/* <p className={headerStyles.description}>
-                Identify your houseplant.
-            </p> */}
         </div>
     )
 }
