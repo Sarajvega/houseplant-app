@@ -47,12 +47,14 @@ const WebcamComponent = ({ setSource }) => {
             />
             <button onClick={capture} className="button-camera">Capture photo</button> */}
             <>
+            <Webcam audio={false} videoConstraints={{ deviceId }} />
                 {devices.map((device, key) => (
-                    <div>
-                        <Webcam audio={false} videoConstraints={{ deviceId: device.deviceId }} />
+                    <button
+                        key={device.deviceId}
+                        onClick={() => setDeviceId(device.deviceId)}
+                    >
                         {device.label || `Device ${key + 1}`}
-                    </div>
-
+                    </button>
                 ))}
             </>
         </>
