@@ -10,7 +10,7 @@ import { useState } from "react";
 const FACING_MODE_ENVIRONMENT = "environment";
 
 const videoConstraints = {
-    facingMode: FACING_MODE_ENVIRONMENT 
+    facingMode: FACING_MODE_ENVIRONMENT
 };
 
 const WebcamComponent = ({ setSource }) => {
@@ -46,19 +46,24 @@ const WebcamComponent = ({ setSource }) => {
             />
             <button onClick={capture} className="button-camera">Capture photo</button> */}
             <>
-                {/* <button onClick={handleClick}>Switch camera</button> */}
-                <Webcam
-                    audio={false}
-                    ref={webcamRef}
-                    videoConstraints={videoConstraints}
+                <div className="w12">
+                    <Webcam
+                        audio={false}
+                        ref={webcamRef}
+                        videoConstraints={videoConstraints}
 
-                    screenshotFormat="image/jpeg"
-                    // videoConstraints={{
-                    //     ...videoConstraints,
-                    //     facingMode
-                    // }}
-                />
-
+                        screenshotFormat="image/jpeg"
+                        style={{
+                            height: '100vh',
+                            width: '100%',
+                            objectFit: 'cover',
+                            // position: 'absolute',
+                        }}
+                        mirrored
+                        width={'100%'}
+                        height={'100vh'}
+                    />
+                </div>
                 <button onClick={capture} className="button-camera">Capture photo</button>
 
             </>
