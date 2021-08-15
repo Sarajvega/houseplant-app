@@ -54,14 +54,14 @@ const WebcamComponent = ({ setSource }) => {
 
                         screenshotFormat="image/jpeg"
                         style={{
-                            height: '100vh',
+                            height: '100%',
                             width: '100%',
                             objectFit: 'cover',
                             // position: 'absolute',
                         }}
                         mirrored
                         width={'100%'}
-                        height={'100vh'}
+                        height={'100%'}
                     />
                 </div>
                 <button onClick={capture} className="button-camera">Capture photo</button>
