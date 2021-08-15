@@ -5,6 +5,14 @@ import { useState } from "react";
 // https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia
 // Use .getUseRMedia() to toggle? Overriding what's built into the webcomponent.
 
+const FACING_MODE_USER = "user";
+const FACING_MODE_ENVIRONMENT = "environment";
+
+const videoConstraints = {
+    facingMode: FACING_MODE_USER
+};
+
+
 const WebcamComponent = ({ setSource }) => {
     const webcamRef = React.useRef(null);
     const videoConstraints = {
@@ -20,22 +28,18 @@ const WebcamComponent = ({ setSource }) => {
         // console.log("this is the imagesrc:", imageSrc)
     }, [webcamRef, setSource]);
 
-    // trying to grab devices w/ cameras
-    const [deviceId, setDeviceId] = React.useState({});
-    const [devices, setDevices] = React.useState([]);
+    // select facing mode
+    const [facingMode, setFacingMode] = React.useState(FACING_MODE_USER);
 
-    const handleDevices = React.useCallback(
-        mediaDevices =>
-            setDevices(mediaDevices.filter(({ kind }) => kind === "videoinput")),
-        [setDevices]
-    );
+    const handleClick = React.useCallback(() => {
+        setFacingMode(
+            prevState =>
+                prevState === FACING_MODE_USER
+                    ? FACING_MODE_ENVIRONMENT
+                    : FACING_MODE_USER
+        );
+    }, []);
 
-    React.useEffect(
-        () => {
-            navigator.mediaDevices.enumerateDevices().then(handleDevices);
-        },
-        [handleDevices]
-    );
 
     return (
         <>
@@ -47,15 +51,15 @@ const WebcamComponent = ({ setSource }) => {
             />
             <button onClick={capture} className="button-camera">Capture photo</button> */}
             <>
-            <Webcam audio={false} videoConstraints={{ deviceId }} />
-                {devices.map((device, key) => (
-                    <button
-                        key={device.deviceId}
-                        onClick={() => setDeviceId(device.deviceId)}
-                    >
-                        {device.label || `Device ${key + 1}`}
-                    </button>
-                ))}
+                <button onClick={handleClick}>Switch camera</button>
+                <Webcam
+                    audio={false}
+                    screenshotFormat="image/jpeg"
+                    videoConstraints={{
+                        ...videoConstraints,
+                        facingMode
+                    }}
+                />
             </>
         </>
     );
