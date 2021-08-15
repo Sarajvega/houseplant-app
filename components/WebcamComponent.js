@@ -8,7 +8,7 @@ import { useState } from "react";
 const WebcamComponent = ({setSource}) => {
     const webcamRef = React.useRef(null);
     const videoConstraints = {
-        facingMode: { exact: "environment" }
+        facingMode: "user"
     };
     
     // memoizing capture function.
