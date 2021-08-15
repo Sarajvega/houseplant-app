@@ -29,14 +29,14 @@ const WebcamComponent = ({ setSource }) => {
     }, [webcamRef, setSource]);
 
     // select facing mode
-    const [facingMode, setFacingMode] = React.useState(FACING_MODE_USER);
+    const [facingMode, setFacingMode] = React.useState(FACING_MODE_ENVIRONMENT);
 
     const handleClick = React.useCallback(() => {
         setFacingMode(
             prevState =>
-                prevState === FACING_MODE_USER
-                    ? FACING_MODE_ENVIRONMENT
-                    : FACING_MODE_USER
+                prevState === FACING_MODE_ENVIRONMENT
+                    ? FACING_MODE_USER
+                    : FACING_MODE_ENVIRONMENT
         );
     }, []);
 
