@@ -6,11 +6,11 @@ import { useState } from "react";
 // Use .getUseRMedia() to toggle? Overriding what's built into the webcomponent.
 
 // set camera options.
-const FACING_MODE_USER = "user";
-// const FACING_MODE_ENVIRONMENT = "environment";
+// const FACING_MODE_USER = "user";
+const FACING_MODE_ENVIRONMENT = "environment";
 
 const videoConstraints = {
-    facingMode: FACING_MODE_USER
+    facingMode: FACING_MODE_ENVIRONMENT 
 };
 
 const WebcamComponent = ({ setSource }) => {
