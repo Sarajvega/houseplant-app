@@ -34,7 +34,7 @@ export default function Layout({ children, home }) {
                 /> */}
                 <link rel="apple-touch-icon" href="/apple-icon.png"></link>
                 <meta name="theme-color" content="#317EFB" />
-                <link rel="icon" href="/sagwa.ico" />
+                <link rel="icon" href="/icon.ico" />
                 <meta
                     name="Identify your houseplants"
                     content="Use tools to take a photo and identify your houseplants"
