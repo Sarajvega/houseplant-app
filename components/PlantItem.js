@@ -13,8 +13,5 @@ const PlantItem = ({plant}) => {
         </Link>
     )
 }
-// How can I take ImgURL prop and retrieve image?
-const getImage = ({ImgURL}) => {
 
-}
 export default PlantItem
