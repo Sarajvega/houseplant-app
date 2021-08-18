@@ -21,10 +21,7 @@
   "version": "1.0.0",
   "main": "firebase.js",
   "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Sarajvega/houseplant-app.git"
-  },
+  "repository": "git+https://github.com/Sarajvega/houseplant-app.git",
   "keywords": [
     "houseplant",
     "webapp",

@@ -1,4 +1,4 @@
-<div style="text-align:center"><img src="https://github.com/Sarajvega/houseplant-app/assets/header.jpg" /></div><br>
+<div style="text-align:center"><img src="https://github.com/Sarajvega/houseplant-app/assets/header.png" /></div><br>
 
 # houseplant-app
 
@@ -17,13 +17,37 @@ houseplant-app is a [progressive web app](https://dev.to/milindsoorya/make-your-
 - [Firebase](https://firebase.google.com/)
 
 ## Usage
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
 
-```bash
-npx create-next-app --example progressive-web-app progressive-web-app
-# or
-yarn create next-app --example progressive-web-app progressive-web-app
+Without Docker
+1. Git clone repo
+2. Cd into repo
+3. Install dependencies with `$ yarn`
+4. Start server with `$ yarn dev`
+5. Open http://localhost:3000/ in your browser to see application. 
+
+With Docker
+1. Git clone repo
+2. Cd into repo
+3. Build image upon which the container is built
+```zsh
+docker build -t ps-container:dev .
 ```
+
+4. confirm image exists
+```zsh
+docker image ls
+```
+
+5. Run command to create and run container
+```zsh
+docker run -it --rm \
+-v ${PWD}:/app \
+-v /app/node_modules \
+-p 3001:3000 \
+-e CHOKIDAR_USEPOLLING=true \
+ps-container:dev
+```
+Note: This code 1. it starts the container in interactive mode. 2. -rm removes the container and volumes after the container exits. 3. v ${PWD}:/app mounts the code into the container at /app.
 
 ## Lessons learned
 
