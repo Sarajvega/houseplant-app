@@ -1,4 +1,6 @@
-<div style="text-align:center"><img src="https://github.com/Sarajvega/houseplant-app/assets/header.png" /></div><br>
+
+![Preview of App](assets/app-preview.png)
+<!-- <div style="text-align:center"><img src="https://github.com/Sarajvega/houseplant-app/assets/app-preview.png" /></div><br> -->
 
 # houseplant-app
 
@@ -17,6 +19,7 @@ houseplant-app is a [progressive web app](https://dev.to/milindsoorya/make-your-
 - [Firebase](https://firebase.google.com/)
 
 ## Usage
+Note: This project uses Node.js v14.17.3.
 
 Without Docker
 1. Git clone repo
@@ -48,14 +51,6 @@ docker run -it --rm \
 ps-container:dev
 ```
 Note: This code 1. it starts the container in interactive mode. 2. -rm removes the container and volumes after the container exits. 3. v ${PWD}:/app mounts the code into the container at /app.
-
-## Lessons learned
-
-What was your motivation?
-Why did you build this project?
-What problem does it solve?
-What did you learn?
-What makes your project stand out? If your project has a lot of features, consider adding a "Features" section and listing them here.
 
 ## Contributing
 For changes, please open an issue first to discuss what you would like to change.
