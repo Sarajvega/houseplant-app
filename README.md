@@ -1,3 +1,5 @@
+<div style="text-align:center"><img src="https://github.com/Sarajvega/houseplant-app/assets/header.jpg" /></div><br>
+
 # houseplant-app
 
 houseplant-app is a progressive web app that helps the novice horticulturalist identify their first house plants with machine learning!
