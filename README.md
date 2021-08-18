@@ -1,15 +1,20 @@
-# Progressive Web App Example
+# houseplant-app
 
-This example uses [`next-pwa`](https://github.com/shadowwalker/next-pwa) to create a progressive web app (PWA) powered by [Workbox](https://developers.google.com/web/tools/workbox/).
+houseplant-app is a progressive web app that helps the novice horticulturalist identify their first house plants with machine learning!
 
-## Deploy your own
+[Deployed Version](https://houseplant-app-4fjtk0ich-sarajvega.vercel.app/)
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+## How it works
+houseplant-app is a [progressive web app](https://dev.to/milindsoorya/make-your-website-pwa-compatible-next-js-part-1-2ccj) built with Next.js. Utilizing a tensorflow model assembled with user-friendly [Lobe](lobe.ai), a [base64](https://en.wikipedia.org/wiki/Base64) version of the image captured with your webcam or mobile device's camera is passed to a [prediction service](https://github.com/Sarajvega/plant-prediction-service), which returns an id. The id is then used to dynamically load a page containing information about your plant.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/progressive-web-app&project-name=progressive-web-app&repository-name=progressive-web-app)
+## Technologies
+- [React](https://reactjs.org/)
+- [Next.js](https://nextjs.org/)
+- [PWA](https://web.dev/progressive-web-apps/)
+- [react-webcam](https://github.com/mozmorris/react-webcam)
+- [Firebase](https://firebase.google.com/)
 
-## How to use
-
+## Usage
 Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
 
 ```bash
@@ -18,4 +23,18 @@ npx create-next-app --example progressive-web-app progressive-web-app
 yarn create next-app --example progressive-web-app progressive-web-app
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+## Lessons learned
+
+What was your motivation?
+Why did you build this project?
+What problem does it solve?
+What did you learn?
+What makes your project stand out? If your project has a lot of features, consider adding a "Features" section and listing them here.
+
+## Contributing
+For changes, please open an issue first to discuss what you would like to change.
+
+
+
+
+
